@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>MALC INC.</title>
+   <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+   <style>
+     .other-container {
+            background: linear-gradient(to bottom, #000000, #2b6b29);
+            border: none;
+            padding: 200px;
+            border-radius: 10px;
+            flex-grow: 1;
+            width: 400px;
+            font-size: x-large;
+        }
+     .heading{
+        color: aquamarine;
+     }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="title-container">
+            <a href="/" class="button">MALC INC.</a>
+            <a href="/page1" class="button">About Phishing</a>
+            <a href="/page2" class="button">Methodology</a>
+            <a href="/page3" class="button">Analytics</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='/images/hacker.png') }}" alt="Description of the image">
+        </div>
+        <div class="content">
+            <div class="other-container">
+                <h2 class="heading">ABOUT PHISHING</h2>
+                <p>Phishing is a form of Social Engineering and scam where attackers deceive
+                    people into revealing sensitive information or installing malware such as ransomware.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>MALC INC.</title>
+   <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="center">
+        <div class="title-container">
+            <a href="/" class="button">MALC INC.</a>
+            <a href="/page1" class="button">About Phishing</a>
+            <a href="/page2" class="button">Methodology</a>
+            <a href="/page3" class="button">Analytics</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='/images/picture.png') }}" alt="Description of the image">
+        </div>
+        <div class="content">
+            <div class="input-container">
+                <h2>Enter the link</h2>
+                <form id="phishingForm" action="/predict" method="post">
+                    <input type="text" id="urlInput" name="url" placeholder="Enter URL to check for phishing">
+                    <button type="submit" class="button">Check</button>
+                </form>                               
+                <p id="resultParagraph">How malicious is your website? Check here!</p>
+                
+                <!-- Display result here -->
+                <div id="resultDiv" style="display: none;">
+                    <h3>Result:</h3>
+                    <p id="resultText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

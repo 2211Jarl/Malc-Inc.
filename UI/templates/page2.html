@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>MALC INC.</title>
+   <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+   <style>
+     .other-container {
+            background: linear-gradient(to bottom, #000000, #2b6b29);
+            border: none;
+            padding: 100px;
+            border-radius: 10px;
+            flex-grow: 1;
+            width: 400px;
+            font-size: x-large;
+        }
+     .heading{
+        color: aquamarine;
+     }
+     .image-container {
+            max-width: 20px;
+            height: auto;
+            margin-right: 400px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="title-container">
+            <a href="/" class="button">MALC INC.</a>
+            <a href="/page1" class="button">About Phishing</a>
+            <a href="/page2" class="button">Methodology</a>
+            <a href="/page3" class="button">Analytics</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='/images/phish.png') }}" alt="Description of the image">
+        </div>
+        <div class="content">
+            <div class="other-container">
+                <h2 class="heading">HOW DO WE DETECT PHISHING LINKS</h2>
+                <p>We use a state-of-the art model which calculates how safe the given link is.
+                    Our mission is to provide you with a secure browsing experience, free from phishing threats.
+                    Trust Malc. Inc. to keep you protected while browsing the World Wide Web.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

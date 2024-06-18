@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Result Page</title>
+   <link rel="stylesheet" type="text/css" href="/static/styles.css">
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+      }
+
+      #resultContainer {
+         text-align: center;
+      }
+
+      .progress-bar {
+         width: 500px;
+         height: 20px;
+         background-color: #f0f0f0;
+         border-radius: 10px;
+         overflow: hidden;
+         margin-top: 20px;
+         justify-content: center;
+         margin: 0 auto;
+
+      }
+
+      .progress-bar-inner {
+         height: 100%;
+         transition: width 0.5s;/* Change this value dynamically based on progress */
+      }
+   </style>
+</head>
+<body>
+   <div id="resultContainer">
+      <h1>Phishing Detection Result</h1>
+      <p id="resultText">The website's probability of phishing is <strong>{{ prediction }}</strong>.</p>
+      <div class="progress-bar">
+         <div class="progress-bar-inner" id="progressBarInner"></div>
+     </div>
+     <p id="resultDescription">{{ result_description }}</p>
+     
+     <script>
+         var progressBarInner = document.getElementById("progressBarInner");
+         progressBarInner.style.backgroundColor = "{{ progress_color }}";
+         progressBarInner.style.width = "{{ progress_width }}%";
+         var resultDescription = document.getElementById("resultDescription");
+         resultDescription.innerText = "{{ result_text }}";
+     </script>
+     
+   </div>
+</body>
+</html>
