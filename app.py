@@ -15,9 +15,9 @@ from URLFeatureExtractor import URLFeatureExtractor
 app = Flask(__name__, template_folder='UI')
 CORS(app)
 
-mongo_uri = 'mongodb+srv://killersaurus161:Jarl_Balgruff2211@malcinc.nfyfpnz.mongodb.net/'
+mongo_uri = 'YOUR_MONGO_URI'
 client = MongoClient(mongo_uri)
-db = client['thatsPhishy'] 
+db = client['sus'] 
 collection = db['cache'] 
 
 with open("scaler.pkl", "rb") as scaler_file:
