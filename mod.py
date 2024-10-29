@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import TensorDataset,DataLoader
 
-df=pd.read_csv("D:\datasets\dataset_phishing.csv")
+df=pd.read_csv("dataset_phishing.csv")
 df=df.drop(labels='url', axis=1)
 object_features=[col for col in df.columns if df[col].dtype=="O"]
 class_labels=df['status'].unique().tolist()
